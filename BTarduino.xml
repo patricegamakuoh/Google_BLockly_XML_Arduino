@@ -1,0 +1,628 @@
+<!-- 
+Developer:Gama,gama@bettertree.cn
+type="company" 
+block="block/BTarduino.js" 
+language="language/" 
+generator="generator/BTarduino.js" 
+media="media/BT_Media/"
+lib="BTarduino/" 
+-->
+<script type="text/javascript" src="../../blocks/company/BTarduino.js"></script>
+<script type="text/javascript" src="../../generators/arduino/company/BTarduino.js"></script>
+<category name="树上科技/BT_UNO 1.1.1_Beta" colour="#20f99b">
+<category name="输入模块/Sensor" colour="#ffd97a">
+<block type="fade_led">
+ <value name="PIN">
+  <shadow type="pins_pwm">
+   <field name="PIN">3</field>
+  </shadow>
+ </value>
+</block>
+<block type="my_potentiometer">
+ <value name="PIN">
+	<shadow type="pins_analog"></shadow>
+ </value>
+</block>
+<block type="my_joystick">
+<value name="PIN">
+	<shadow type="pins_analog"></shadow>
+ </value>
+</block>
+<block type="my_button">
+ <value name="PIN">
+	<shadow type="pins_digital"></shadow>
+ </value>
+</block>
+<block type="my_light">
+ <value name="PIN">
+	<shadow type="pins_analog"></shadow>
+ </value>
+</block>
+<block type="Moisture">
+ <value name="PIN">
+  <shadow type="pins_analog"></shadow>
+ </value>
+</block>
+<block type="my_dht">
+ <value name="PIN">
+	<shadow type="pins_analog"></shadow>
+ </value>
+</block>
+<block type="Pulse_Init">
+ <value name="PIN1">
+  <shadow type="pins_analog">
+    <field name="PIN">A4</field>
+ </shadow>
+</value>
+<value name="PIN2">
+ <shadow type="pins_analog">
+  <field name="PIN">A5</field>
+  </shadow>
+ </value>
+</block>
+<block type="Pulse">
+ <value name="PIN1">
+  <shadow type="pins_analog">
+   <field name="PIN">A4</field>
+ </shadow>
+</value>
+<value name="PIN2">
+ <shadow type="pins_analog">
+   <field name="PIN">A5</field>
+  </shadow>
+ </value>
+</block>
+<block type="my_flame">
+ <value name="PIN">
+  <shadow type="pins_analog"></shadow>
+ </value>
+</block>
+<block type="VoiceSensor">
+ <value name="PIN">
+  <shadow type="pins_analog">
+  </shadow>
+ </value>
+</block>
+<block type="my_pyroelectric_infrared">
+  <value name="PIN">
+   <shadow type="pins_digital">
+  </shadow>
+ </value>
+</block>
+<block type="distancesensor">
+ <value name="PIN1">
+   <shadow type="pins_digital">
+    <field name="PIN">13</field>
+ </shadow>
+</value>
+<value name="PIN2">
+  <shadow type="pins_pwm">
+    <field name="PIN">11</field>
+  </shadow>
+ </value>
+</block>
+<block type="MPU6050_refres">
+ <value name="PIN1">
+   <shadow type="pins_analog">
+      <field name="PIN">A4</field>
+   </shadow>
+  </value>
+ <value name="PIN2">
+    <shadow type="pins_analog">
+       <field name="PIN">A5</field>
+   </shadow>
+  </value> 
+ </block> 
+<block type="MPU6050imu">
+ <value name="PIN">
+  <shadow type="pins_digital"></shadow>
+ </value>
+</block>
+   
+</category>
+
+<category name="控制模块/Actuate" colour="#ff87ed">
+ <block type="metrix_LED_Init">
+  <value name="PIN1">
+   <shadow type="pins_analog">
+    <field name="PIN">A4</field>
+   </shadow>
+  </value>
+<value name="PIN2">
+ <shadow type="pins_analog">
+   <field name="PIN">A5</field>
+ </shadow>
+</value>
+<next>
+<block type="Metrix_display">
+ <value name="TEXT">
+   <shadow type="math_number">
+    <field name="NUM">0</field>
+    </shadow>
+   </value>
+  </block>
+ </next>
+</block>
+
+<block type="Metrix_display_icon">  </block>
+
+<block type="Lattice_LED_clear"></block>
+
+<block type="iot_receive_Display">
+<value name="Input_topic">
+  <shadow type="text">
+    <field name="TEXT">XX</field>
+  </shadow>
+ </value>
+</block>
+
+<block type="my_led">
+  <value name="PIN">
+     <shadow type="pins_digital"></shadow>
+  </value>
+</block>
+
+<block type="my_LED_analog_write">
+  <value name="PIN">
+    <shadow type="pins_pwm">
+        <field name="PIN">3</field>
+    </shadow>
+   </value>
+<value name="NUM">   
+  <shadow type="math_number">
+   <field name="NUM">200</field>
+  </shadow>
+ </value>
+</block>
+
+<block type="rgb_LED">
+ <value name="PIN">   
+  <shadow type="pins_digital">
+   <field name="PIN">6</field>
+  </shadow>
+ </value>
+<value name="rgb_count">
+ <shadow type="math_number">
+  <field name="NUM">4</field>
+  </shadow>
+ </value>
+<value name="BRIGHTNESS">
+ <shadow type="math_number">
+  <field name="NUM">60</field>
+ </shadow>
+</value>
+<value name="_LED_">
+  <shadow type="math_number">
+   <field name="NUM">1</field>
+  </shadow>
+ </value>
+</block>
+      
+<block type="TM1640_7segment">
+ <value name="PIN1">
+  <shadow type="pins_analog">
+   <field name="PIN">A4</field>
+ </shadow>
+</value>
+<value name="PIN2">
+ <shadow type="pins_analog">
+  <field name="PIN">A5</field>
+ </shadow>
+</value>
+<next>
+<block type="TM1640_DisplayString">
+ <value name="VALUE">
+   <shadow type="text">
+     <field name="TEXT">1234</field>
+    </shadow>
+   </value>
+  </block>
+ </next> 
+</block>
+
+<block type="TM1640_DisplayString1">
+ <value name="VALUE">
+  <shadow type="math_number">
+       <field name="NUM">1024</field>
+  </shadow>
+ </value>
+</block>
+
+<block type="Clear_TM1640"></block>
+ <block type="my_buzzer">
+  <value name="PIN">
+    <shadow type="pins_digital"></shadow>
+ </value> 
+</block>
+
+<block type="no_tone">
+ <value name="PIN">
+    <shadow type="pins_digital"></shadow>
+ </value>
+</block>
+
+<block type="my_speaker2">
+ <value name="PIN">
+  <shadow type="pins_digital">
+ </shadow>
+</value>
+<value name="FREQUENCY">
+ <shadow type="math_number">
+   <field name="NUM">200</field>
+ </shadow>
+</value>
+<value name="DURATION">
+ <shadow type="math_number">
+   <field name="NUM">1000</field>
+  </shadow>
+ </value>
+</block>
+
+<block type="my_speaker1">
+  <value name="PIN">
+   <shadow type="pins_digital">
+ </shadow>
+</value>
+<value name="FREQUENCY">
+ <shadow type="math_number">
+    <field name="NUM">200</field>
+  </shadow>
+ </value> 
+</block>
+
+<block type="my_speaker3">
+  <value name="PIN">
+    <shadow type="pins_digital"></shadow>
+ </value> 
+</block>
+<block type="no_tone1">
+  <value name="PIN">
+		<shadow type="pins_digital"></shadow>
+	</value>
+</block>
+
+<block type="my_relay">
+  <value name="PIN">
+    <shadow type="pins_digital"></shadow>
+  </value>
+</block>
+  
+<block type="My_Servo">
+ <value name="PIN">
+   <shadow type="pins_digital">
+     <field name="PIN">6</field>
+  </shadow>
+ </value>
+<value name="DEGREE">
+ <shadow type="math_number">
+    <field name="NUM">90</field>
+ </shadow>
+</value>
+<value name="DELAY_TIME">
+ <shadow type="math_number">
+    <field name="NUM">1000</field>
+  </shadow>
+ </value> 
+</block>
+
+<block type="Motor_Drive">
+ <value name="PIN1">
+  <shadow type="pins_digital">
+   <field name="PIN">6</field>
+ </shadow>
+</value>
+<value name="PIN2">
+ <shadow type="pins_digital">
+   <field name="PIN">8</field>
+ </shadow>
+</value> 
+<value name="speed">
+ <shadow type="math_number">
+  <field name="NUM">100</field>
+  </shadow>
+ </value> 
+</block> 
+
+</category>	
+
+<category name="通信模块/Communicate" colour="#1ee89a">
+
+<block type="Record">
+  <value name="PIN1">
+    <shadow type="pins_digital">
+      <field name="PIN">11</field>
+  </shadow>
+ </value>
+<value name="PIN2">
+  <shadow type="pins_digital">
+      <field name="PIN">10</field>
+  </shadow>
+ </value>
+  <value name="DURATION">
+   <shadow type="math_number">
+    <field name="NUM">10000</field>
+  </shadow>
+ </value>
+</block>
+
+<block type="IRremote">
+  <value name="PIN">
+    <shadow type="pins_pwm">
+      <field name="PIN">11</field>
+    </shadow>
+  </value>
+<value name="DO">
+<block type="controls_if"> 
+  <value name="IF0">
+   <block type="IR_val"></block>
+   </value>
+  </block> 
+ </value>
+</block>
+
+<block type="IRremote2"></block>
+
+<block type="RFID_Init">
+  <value name="PIN1">
+    <shadow type="math_number">
+      <field name="NUM">9</field>
+   </shadow>
+  </value>
+ <value name="PIN2">
+  <shadow type="math_number">
+     <field name="NUM">6</field>
+  </shadow>
+ </value>
+</block>
+
+<block type="RFID_Write">
+ <value name="RFID_ID">
+  <shadow type="math_number">
+    <field name="NUM">xxxxxxxx</field>
+  </shadow>
+ </value>
+</block>
+
+<block type="RFID_Read"></block>
+
+<block type="RFID_Available">
+<value name="DO">
+<block type="controls_if"> 
+  <value name="IF0">
+    <block type="RFID_HasCard">
+     <value name="RFID_ID">
+      <shadow type="math_number">
+        <field name="NUM">xxxxxxxx</field>
+      </shadow>
+     </value>
+    </block>
+   </value>
+  </block> 
+ </value>
+</block>
+
+<block type="infrared_tracking">
+ <value name="PIN">
+   <shadow type="pins_digital"></shadow>
+ </value>
+</block>
+
+<block type="IR_Distance">
+  <value name="PIN">
+      <shadow type="pins_digital"></shadow>
+ </value>
+</block>
+
+</category>
+
+<category name="AI" colour="#70f96d">  
+<block type="Voice_Init">
+  <value name="PIN1">
+    <shadow type="pins_digital">
+       <field name="PIN">10</field>
+   </shadow>
+  </value>
+  <value name="PIN2">
+    <shadow type="pins_digital">
+      <field name="PIN">11</field>
+   </shadow>
+  </value>
+ <next>
+ <block type="controls_if"> 
+  <value name="IF0">
+     <block type="Voice_in"></block> 
+  </value>
+   <value name="DO0">
+     <block type="Voice_out"></block>
+  </value>
+ </block> 
+</next>
+<block type="Voice_clear"> </block>  
+</block>
+
+<block type="MuInit">
+ <value name="PIN1">
+  <shadow type="pins_analog">
+      <field name="PIN">A4</field>
+    </shadow>
+  </value>
+ <value name="PIN2">
+    <shadow type="pins_analog">
+      <field name="PIN">A5</field>
+  </shadow>
+ </value>
+<value name="PIN3">
+  <shadow type="pins_digital">
+    <field name="PIN">11</field>
+ </shadow>
+</value>
+<value name="PIN4">
+  <shadow type="pins_digital">
+      <field name="PIN">10</field>
+ </shadow>
+</value>
+<next>
+<block type="Vs2VisionBegin2"></block>
+ </next>
+</block>
+<block type="controls_if"> 
+  <value name="IF0">
+    <block type="Vs2Detected2"></block>
+  </value>
+<value name="DO0">
+ <block type="serial_println"> 
+  <value name="CONTENT">
+   <block type="Vs2GetMessage2"></block>
+   </value>
+  </block>
+ </value>
+</block> 
+
+<block type="Vs2GetCardType2"></block>
+
+<block type="Vs2DetectedColorDetect2"></block>
+
+<block type="Vs2GetColorLabel2"></block>
+
+<block type="Vs2DetectedRegionColor2">
+ <value name="XValue">
+  <shadow type="math_number">
+    <field name="NUM">50</field>
+ </shadow>
+</value>
+<value name="YValue">
+  <shadow type="math_number">
+   <field name="NUM">50</field>
+  </shadow>
+ </value>
+</block>
+    
+</category>
+
+<category name="IoT" colour="#12aac9">
+<block type="iot_config">
+<value name="PIN1">
+ <shadow type="pins_digital">
+   <field name="PIN">11</field>
+ </shadow>
+</value>
+<value name="PIN2">
+  <shadow type="pins_digital">
+    <field name="PIN">10</field>
+ </shadow>
+</value> 
+<value name="server_add">
+  <shadow type="text">
+    <field name="TEXT">1234567</field>
+ </shadow>
+</value>
+<value name="WiFi_ID">
+  <shadow type="text">
+    <field name="TEXT">WuG</field>
+ </shadow>
+</value>
+<value name="wifi_pass">
+  <shadow type="text">
+    <field name="TEXT">bettertree</field>
+ </shadow>
+</value>
+ <value name="wifi_key">
+  <shadow type="text">
+    <field name="TEXT">3081583811844691</field>
+ </shadow>
+</value>
+<next>
+ <block type="iot_Serial">
+  <value name="PIN1">
+   <shadow type="pins_digital">
+    <field name="PIN">10</field>
+  </shadow>
+ </value>
+<value name="PIN2">
+  <shadow type="pins_digital">
+    <field name="PIN">11</field>
+    </shadow>
+   </value>
+  </block>
+ </next>
+</block>
+
+<block type="iot_send"> 
+  <value name="Input_topic">
+   <shadow type="text">
+     <field name="TEXT">XX</field>
+   </shadow>
+ </value>
+<value name ="input1">
+ <block type="my_potentiometer">
+  <value name="PIN">
+    <shadow type="pins_analog"></shadow>
+   </value>
+  </block>
+ </value>
+</block>
+
+<block type="iot_receiveTopic">
+ <value name="Input_topic">
+  <shadow type="text">
+       <field name="TEXT">XX</field>
+  </shadow>
+ </value>
+<next>
+<block type="controls_if"> 
+ <value name="IF0">
+     <block type="Iot_Init_Receive">
+  </block>
+ </value>
+<value name="DO0">
+  <block type="controls_if"> 
+   <value name="IF0">
+    <block type="Receive_Topic">
+     <value name="Input_topic">
+      <shadow type="text">
+         <field name="TEXT">XX</field>
+     </shadow>
+    </value>
+   </block>
+  </value>
+ <value name="DO0">
+<block type="serial_println"> 
+ <value name="CONTENT">
+  <block type="Receive_Value"></block>
+   </value>
+  </block>
+ </value>
+</block> 
+   </value>
+  </block> 
+ </next>
+</block>
+
+</category>
+</category>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
